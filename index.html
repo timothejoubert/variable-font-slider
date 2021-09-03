@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<section class="gui">
+		<h2 class="titre-gui">Graisse</h2>
+
+		<div slider id="slider-distance">
+			<div class="container-range min-container">
+				<div class="thumb thumb-min"></div>
+				<span class="span-value"></span>
+			</div>
+
+			<div class="container-range middle-container">
+				<div class="thumb thumb-middle"></div>
+				<span class="span-value"></span>
+			</div>
+
+			<div class="container-range max-container">
+				<div class="thumb thumb-max"></div>
+				<span class="span-value"></span>
+			</div>
+
+			<div class="in-between"></div>
+		</div>
+
+		<div class="container-params">
+			<h2>Paramètres</h2>
+			<label>
+				Vitesse animation
+				<input type="range" id="anim-speed" min="1" value="50" max="100">
+			</label>
+			<label>
+				Delay entre chaque lettre
+				<input type="range" id="delay-speed" min="0" value="0" max="5" step="0.01">
+			</label>
+			<label>
+				Contenu texte
+				<input type="text" id="txt-content" value="Je sens que je vais être malade...">
+			</label>
+			<label> Alignement
+				<select id="align-select">
+					<option value="">--Please choose an option--</option>
+					<option value="left">Gauche</option>
+					<option value="center">centrer</option>
+					<option value="right">Droite</option>
+					<option value="space-between">Justifier</option>
+					<option value="space-evenly">Espace entre</option>
+				</select>
+			</label>
+		</div>
+
+	</section>
+
+	<section class="content-page">
+		<article class="variable-font"></article>
+	</section>
+
+	<script src="plain-draggable.min.js"></script>
+	<script src="sketch.js"></script>
+
+</body>
+
+</html>

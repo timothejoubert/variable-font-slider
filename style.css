@@ -1,0 +1,345 @@
+:root {
+	--weight-start: 1;
+	--weight-end: 800;
+	--vitesse-anim: 3000ms;
+}
+
+/* poppins */
+@font-face {
+	font-family: "Poppins";
+	src: url("fonts/Poppins-Black.otf") format("truetype");
+	font-weight: 800;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("fonts/Poppins-BlackItalic.otf") format("truetype");
+	font-weight: 800;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("fonts/Poppins-Bold.otf") format("truetype");
+	font-weight: 600;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("fonts/Poppins-BoldItalic.otf") format("truetype");
+	font-weight: 600;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("fonts/Poppins-Medium.otf") format("truetype");
+	font-weight: 500;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("fonts/Poppins-MediumItalic.otf") format("truetype");
+	font-weight: 500;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("fonts/Poppins-Regular.otf") format("truetype");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("fonts/Poppins-RegularItalic.otf") format("truetype");
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("fonts/Poppins-Light.otf") format("truetype");
+	font-weight: 300;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("fonts/Poppins-LightItalic.otf") format("truetype");
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("fonts/Poppins-Thin.otf") format("truetype");
+	font-weight: 200;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("fonts/Poppins-ThinItalic.otf") format("truetype");
+	font-weight: 200;
+	font-style: italic;
+}
+body {
+	background-color: #666;
+	margin: 50px;
+	font-family: "Poppins", sans-serif;
+}
+h2 {
+	font-weight: 600;
+	font-size: 1.2em;
+}
+span,
+label {
+	font-size: 0.9em;
+}
+.gui {
+	position: relative;
+	width: 100%;
+}
+.container-params label {
+	display: flex;
+	align-items: center;
+	margin: 8px 0;
+}
+.container-params input,
+.container-params select {
+	margin-left: 15px;
+}
+#txt-content {
+	width: 300px;
+}
+#slider-distance {
+	position: relative;
+	height: 28px;
+	border-radius: 28px;
+	margin: 30px 0;
+	background-color: #e5eceb;
+}
+.span-value {
+	position: absolute;
+	top: -30px;
+}
+.max-container .span-value,
+.min-container .span-value {
+	font-weight: 600;
+}
+.slider-visu {
+	position: absolute;
+	left: 13px;
+	right: 15px;
+	height: 14px;
+}
+
+.left-side {
+	position: absolute;
+	left: 0;
+	height: 14px;
+	border-radius: 10px;
+	background-color: #ccc;
+	margin: 0 7px;
+}
+
+.right-side {
+	position: absolute;
+	right: 0;
+	height: 14px;
+	border-radius: 10px;
+	background-color: #ccc;
+	margin: 0 7px;
+}
+
+.in-between {
+	position: absolute;
+	height: 100%;
+	border-radius: 14px;
+	background-color: #1abc9c;
+}
+.container-range {
+	position: absolute;
+	height: 28px;
+	width: 100%;
+}
+.thumb {
+	position: absolute;
+	/* top: -7px; */
+	z-index: 2;
+	height: 28px;
+	width: 28px;
+	/* margin-left: -11px; */
+	cursor: pointer;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+	background-color: #fff;
+	border-radius: 50%;
+	outline: none;
+}
+.thumb.thumb-middle {
+	background-color: rgb(204, 112, 112);
+}
+#anim-speed,
+#delay-speed {
+	position: relative;
+	width: 250px;
+}
+input[type="range"] {
+	position: absolute;
+	pointer-events: none;
+	-webkit-appearance: none;
+	z-index: 3;
+	height: 10px;
+	top: -2px;
+	width: 150px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	/* opacity: 0; */
+	border-radius: 15px;
+}
+
+input[type="range"]::-ms-track {
+	-webkit-appearance: none;
+	background: transparent;
+	color: transparent;
+}
+
+input[type="range"]::-moz-range-track {
+	-moz-appearance: none;
+	background: transparent;
+	color: transparent;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+	background: transparent;
+	border: transparent;
+}
+
+input[type="range"]:focus {
+	outline: none;
+}
+input[type="range"]::-ms-thumb {
+	pointer-events: all;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 0 none;
+	background: red;
+}
+
+input[type="range"]::-moz-range-thumb {
+	pointer-events: all;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 0 none;
+	background: red;
+}
+input[type="range"]::-webkit-slider-thumb {
+	pointer-events: all;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 0 none;
+	background: red;
+	-webkit-appearance: none;
+}
+
+input[type="range"]::-ms-fill-lower {
+	background: transparent;
+	border: 0 none;
+}
+
+input[type="range"]::-ms-fill-upper {
+	background: transparent;
+	border: 0 none;
+}
+
+input[type="range"]::-ms-tooltip {
+	display: none;
+}
+
+.label {
+	opacity: 0;
+	position: absolute;
+	margin-left: -11px;
+	top: -39px;
+	z-index: 3;
+	background-color: #1abc9c;
+	color: #fff;
+	width: 28px;
+	height: 28px;
+	border-radius: 28px;
+	-webkit-border-radius: 28px;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.label:after {
+	position: absolute;
+	content: "";
+	left: 0;
+	border-radius: 16px;
+	top: 19px;
+	border-left: 14px solid transparent;
+	border-right: 14px solid transparent;
+	border-top-width: 16px;
+	border-top-style: solid;
+	border-top-color: #1abc9c;
+}
+
+.label > span {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 28px;
+}
+#slider-distance:hover label {
+	opacity: 1;
+}
+
+/* variable */
+.content-page {
+	border-top: var(--primary-color) var(--width-default) solid;
+	padding: 50px 0;
+}
+.content-page article {
+	margin-bottom: 30px;
+}
+.content-page article p {
+	font-family: "roboto-flex";
+}
+/*//////////*/
+/* font transformation */
+/*//////////*/
+
+@font-face {
+	font-family: "anchos";
+	src: url("AnchoGX.ttf");
+	font-style: normal;
+}
+.variable-font {
+	display: flex;
+	flex-wrap: wrap;
+}
+.variable-font span {
+	font-family: "anchos";
+	font-size: calc(0.8em + 5vw);
+	/* animation: variation var(--vitesse-anim) infinite alternate cubic-bezier(0, 0, 0.58, 1.0); */
+	/* transition: all 300ms; */
+}
+
+/* @keyframes variation {
+  0%{
+    font-weight: var(--weight-start);
+  }
+  100%{
+    font-weight: var(--weight-end);
+  }
+}
+
+   */
+@media (max-width: 650px) {
+	body {
+		margin: 20px;
+	}
+	label {
+		display: block !important;
+	}
+	input {
+		width: 100% !important;
+		flex: 1 !important;
+		margin: 0 !important;
+	}
+}
